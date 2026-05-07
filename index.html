@@ -1,15 +1,222 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="" rel="stylesheet" />
-    <title>Big data Mock Tes</title>
+    <title>Big Data: Exam Prep</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Rajdhani:wght@400;500;600&display=swap"
+        rel="stylesheet" />
 </head>
 
 <body>
-    <h1>Hi</h1>
+
+    <!-- ═══════════════════════════════════════════════
+       BOOT SCREEN
+  ═══════════════════════════════════════════════ -->
+    <div id="boot-screen" class="screen active">
+        <div class="boot-logo">
+            <div class="logo-text">QUIZ<span>OS</span></div>
+            <div class="logo-sub">EXAM PREPARATION SYSTEM v2.0</div>
+        </div>
+        <div class="boot-terminal">
+            <div class="terminal-line">Initializing quiz engine... <span class="ok">[OK]</span></div>
+            <div class="terminal-line">Loading question bank... <span class="ok" id="boot-q-count">[OK]</span></div>
+            <div class="terminal-line">Checking saved state... <span class="ok" id="boot-save-status">[OK]</span></div>
+            <div class="terminal-line blink-line">Ready. Configure session below.</div>
+        </div>
+
+        <div class="config-panel">
+            <div class="config-row">
+                <label class="config-label">MODE</label>
+                <div class="toggle-group" id="mode-toggle">
+                    <button class="toggle-btn active" data-mode="practice">PRACTICE</button>
+                    <button class="toggle-btn" data-mode="exam">EXAM</button>
+                </div>
+                <div class="config-hint" id="mode-hint">Answers revealed instantly after each selection.</div>
+            </div>
+
+            <div class="config-row">
+                <label class="config-label">TIMER</label>
+                <div class="toggle-group" id="timer-toggle">
+                    <button class="toggle-btn active" data-timer="none">OFF</button>
+                    <button class="toggle-btn" data-timer="30">30 MIN</button>
+                    <button class="toggle-btn" data-timer="60">60 MIN</button>
+                    <button class="toggle-btn" data-timer="custom">CUSTOM</button>
+                </div>
+                <input type="number" id="custom-time" class="custom-input" placeholder="minutes" min="1" max="300" />
+            </div>
+
+            <div class="config-row">
+                <label class="config-label">OPTIONS</label>
+                <div class="checkbox-group">
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="opt-shuffle-q" />
+                        <span class="checkmark"></span>
+                        Shuffle Questions
+                    </label>
+                    <label class="checkbox-item">
+                        <input type="checkbox" id="opt-shuffle-a" />
+                        <span class="checkmark"></span>
+                        Shuffle Options
+                    </label>
+                </div>
+            </div>
+
+            <div id="resume-banner" class="resume-banner hidden">
+                <span class="resume-icon">◈</span>
+                <span>Saved session detected. Resume where you left off?</span>
+                <div class="resume-buttons">
+                    <button id="btn-resume" class="btn-resume">RESUME</button>
+                    <button id="btn-new" class="btn-new">NEW SESSION</button>
+                </div>
+            </div>
+
+            <button id="btn-start" class="btn-start">INITIATE QUIZ <span class="arrow">▶</span></button>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+       QUIZ SCREEN
+  ═══════════════════════════════════════════════ -->
+    <div id="quiz-screen" class="screen">
+
+        <!-- Top HUD -->
+        <div class="hud">
+            <div class="hud-left">
+                <span class="hud-label">MODE</span>
+                <span class="hud-value" id="hud-mode">PRACTICE</span>
+            </div>
+            <div class="hud-center">
+                <div class="progress-bar-wrap">
+                    <div class="progress-bar-fill" id="progress-bar"></div>
+                </div>
+                <div class="progress-text" id="progress-text">0 / 0</div>
+            </div>
+            <div class="hud-right">
+                <span class="hud-label">TIME</span>
+                <span class="hud-value timer-display" id="timer-display">--:--</span>
+            </div>
+        </div>
+
+        <div class="quiz-body">
+
+            <!-- Navigator Sidebar -->
+            <aside class="sidebar" id="sidebar">
+                <div class="sidebar-header">
+                    <span>NAVIGATOR</span>
+                    <button class="sidebar-close" id="sidebar-close">✕</button>
+                </div>
+                <div class="sidebar-legend">
+                    <span class="leg answered">●</span> Answered
+                    <span class="leg marked">●</span> Marked
+                    <span class="leg unanswered">●</span> Unanswered
+                </div>
+                <div class="nav-grid" id="nav-grid"></div>
+                <div class="sidebar-stats">
+                    <div class="stat-item"><span id="stat-answered">0</span> Answered</div>
+                    <div class="stat-item"><span id="stat-marked">0</span> Marked</div>
+                    <div class="stat-item"><span id="stat-unanswered">0</span> Remaining</div>
+                </div>
+                <button class="btn-finish-sidebar" id="btn-finish-sidebar">SUBMIT QUIZ</button>
+            </aside>
+
+            <!-- Main Question Area -->
+            <main class="question-area">
+                <div class="question-header">
+                    <span class="q-num" id="q-num">Q01</span>
+                    <div class="q-actions">
+                        <button class="btn-mark" id="btn-mark" title="Mark for Review">⚑ MARK</button>
+                        <button class="btn-nav-toggle" id="btn-nav-toggle" title="Toggle Navigator">⊞ NAV</button>
+                    </div>
+                </div>
+
+                <div class="question-card" id="question-card">
+                    <div class="question-text" id="question-text"></div>
+                    <div class="question-image-wrap" id="question-image-wrap">
+                        <img id="question-image" alt="Question diagram" />
+                    </div>
+                    <div class="options-list" id="options-list"></div>
+
+                    <!-- Practice mode feedback -->
+                    <div class="feedback-box hidden" id="feedback-box">
+                        <span class="feedback-icon" id="feedback-icon"></span>
+                        <span class="feedback-text" id="feedback-text"></span>
+                    </div>
+                </div>
+
+                <div class="nav-buttons">
+                    <button class="btn-prev" id="btn-prev">◀ PREV</button>
+                    <button class="btn-next" id="btn-next">NEXT ▶</button>
+                </div>
+            </main>
+        </div>
+
+        <div class="keyboard-hints">
+            <span>← → navigate</span>
+            <span>1–9 select option</span>
+            <span>M mark</span>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════
+       RESULT SCREEN
+  ═══════════════════════════════════════════════ -->
+    <div id="result-screen" class="screen">
+        <div class="result-container">
+            <div class="result-header">
+                <div class="result-title">SESSION COMPLETE</div>
+                <div class="result-grade" id="result-grade">—</div>
+            </div>
+
+            <div class="score-ring-wrap">
+                <svg class="score-ring" viewBox="0 0 200 200">
+                    <circle class="ring-bg" cx="100" cy="100" r="85" />
+                    <circle class="ring-fill" id="ring-fill" cx="100" cy="100" r="85" stroke-dasharray="534"
+                        stroke-dashoffset="534" />
+                </svg>
+                <div class="score-center">
+                    <div class="score-pct" id="score-pct">0%</div>
+                    <div class="score-label">SCORE</div>
+                </div>
+            </div>
+
+            <div class="result-stats-grid">
+                <div class="res-stat correct">
+                    <div class="res-stat-val" id="res-correct">0</div>
+                    <div class="res-stat-label">CORRECT</div>
+                </div>
+                <div class="res-stat incorrect">
+                    <div class="res-stat-val" id="res-incorrect">0</div>
+                    <div class="res-stat-label">INCORRECT</div>
+                </div>
+                <div class="res-stat skipped">
+                    <div class="res-stat-val" id="res-skipped">0</div>
+                    <div class="res-stat-label">SKIPPED</div>
+                </div>
+                <div class="res-stat time">
+                    <div class="res-stat-val" id="res-time">—</div>
+                    <div class="res-stat-label">TIME TAKEN</div>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button class="btn-review" id="btn-review">REVIEW ANSWERS</button>
+                <button class="btn-restart" id="btn-restart">RESTART QUIZ</button>
+            </div>
+
+            <!-- Review Panel -->
+            <div class="review-panel hidden" id="review-panel">
+                <div class="review-title">ANSWER REVIEW</div>
+                <div class="review-list" id="review-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
