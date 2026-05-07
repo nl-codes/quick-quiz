@@ -1,6 +1,6 @@
 [
     {
-        "question": 1,
+        "question": "Which of the following types of applications are most suitable for an Online Transactional Processing (OLTP) system?",
         "options": [
             "Student Information System such as eVision",
             "Data warehouse",
@@ -10,7 +10,7 @@
         "answer": 0
     },
     {
-        "question": 2,
+        "question": "What command could be used to find several values in the text field of the weather collection?",
         "options": [
             "db.weather.find({text:{$all:[\"sun\",\"rain\",\"icy\"]}})",
             "db.weather.find({text:{$in:[/sun/,/rain/,/icy/]}})",
@@ -20,12 +20,12 @@
         "answer": 1
     },
     {
-        "question": 3,
+        "question": "Given 1 Kilobyte is 1000 bytes. How many multiples of kilobytes is an Exabyte (EB)?",
         "options": ["1000³", "1000⁴", "1000⁵", "1000⁶"],
         "answer": 3
     },
     {
-        "question": 4,
+        "question": "What does PageRank calculate?",
         "options": [
             "The authority of a web page",
             "The speed at which a web page loads in a browser",
@@ -35,7 +35,7 @@
         "answer": 0
     },
     {
-        "question": 5,
+        "question": "What sort of data is best suited to a bitmap index?",
         "options": [
             "High-cardinality data",
             "Low-cardinality data (gender, yes/no)",
@@ -45,7 +45,7 @@
         "answer": 1
     },
     {
-        "question": 6,
+        "question": "Consider the following query vector q and document vectors d1 and d2. According to the vector space model, what would be the scores of d1 and d2 and how would the documents be ranked?",
         "options": [
             "d2 with score 2, d1 with score 1",
             "d1 with score 2, d2 with score 1",
@@ -55,7 +55,7 @@
         "answer": 0
     },
     {
-        "question": 7,
+        "question": "One approach to handling dirty data is to Fix it. What would this entail?",
         "options": [
             "Delete dataset",
             "Replace incorrect values with correct values",
@@ -65,7 +65,7 @@
         "answer": 1
     },
     {
-        "question": 8,
+        "question": "Using a Spark DataFrame and the Weather json file, which of the following commands would show just the screen name and name of tweets made by German users?",
         "options": [
             "df.select('user.screen_name','user.name').show(40)",
             "df.filter(df['user.lang'] == \"de\").select('user.screen_name','user.name').show(40)",
@@ -75,9 +75,9 @@
         "answer": 1
     },
     {
-        "question": 9,
+        "question": "What is the purpose of stopword elimination?",
         "options": [
-            "Frequent terms like “and”, “or”, don’t bear any meaning for search and retrieval",
+            "Frequent terms like “and”, “or”, don't bear any meaning for search and retrieval",
             "Increase textual data with commonly used words",
             "Translate all words into multiple languages",
             "Convert raw text into image-based representations"
@@ -85,7 +85,7 @@
         "answer": 0
     },
     {
-        "question": 10,
+        "question": "Which of the following is not a valid command to handle data in HDFS?",
         "options": [
             "hdfs dfs -put file.txt /user/data/",
             "hdfs dfs -ls /user/data/",
@@ -95,7 +95,7 @@
         "answer": 3
     },
     {
-        "question": 11,
+        "question": "Which of the following is an example of photo and video image data?",
         "options": [
             "Text file",
             "Spreadsheet",
@@ -105,7 +105,7 @@
         "answer": 2
     },
     {
-        "question": 12,
+        "question": "Which type of model is used for predicting a continuous numerical value?",
         "options": [
             "Regression Model",
             "Classification Model",
@@ -115,17 +115,17 @@
         "answer": 0
     },
     {
-        "question": 13,
+        "question": "Name the high level language that is a main part of Apache Pig.",
         "options": ["Pig Script", "Pig Latin", "Pig SQL", "Pig Query"],
         "answer": 1
     },
     {
-        "question": 14,
+        "question": "If today's temperature is 12°C. What type of measurement is the temperature value?",
         "options": ["Nominal", "Ordinal", "Interval", "Ratio"],
         "answer": 2
     },
     {
-        "question": 15,
+        "question": "Given the following data, what type of NoSQL database would suitable?",
         "options": [
             "Key-value database",
             "Document database",
@@ -135,7 +135,7 @@
         "answer": 2
     },
     {
-        "question": 16,
+        "question": "Which of the following requirements are needed for programming Big Data?",
         "options": [
             "Handle fault tolerance",
             "Access data fast",
@@ -145,12 +145,12 @@
         "answer": 3
     },
     {
-        "question": 17,
+        "question": "Below is the mini toy Web, which of the web pages would you expect to get the highest PageRank?",
         "options": ["d1", "d2", "d3", "d4"],
         "answer": 0
     },
     {
-        "question": 18,
+        "question": "What does Veracity mean in the context of Big Data?",
         "options": [
             "Speed of data generation",
             "Trustworthiness of data",
@@ -160,7 +160,7 @@
         "answer": 1
     },
     {
-        "question": 19,
+        "question": "You have a new collection called myTweets which has over 10,000 documents. You do not know what type of data it contains. Which command can help you find out the structure of a document?",
         "options": [
             "db.myTweets.find()",
             "db.myTweets.findOne()",
@@ -170,7 +170,7 @@
         "answer": 1
     },
     {
-        "question": 20,
+        "question": "What is the order of the three steps to Map Reduce?",
         "options": [
             "Map → Reduce → Shuffle",
             "Reduce → Map → Sort",
@@ -180,12 +180,12 @@
         "answer": 2
     },
     {
-        "question": 21,
+        "question": "Which line of code tells Hadoop what output directory to create?",
         "options": ["FileOutputFormat.setOutputPath(job, new Path(args[1]));"],
         "answer": 0
     },
     {
-        "question": 22,
+        "question": "What command can be used to find documents containing the word icy in the weather collection. icy should be found no matter what case it is in (upper, lower, etc)?",
         "options": [
             "db.weather.find({text:\"icy\"})",
             "db.weather.find({text:/icy/i})",
@@ -195,12 +195,12 @@
         "answer": 1
     },
     {
-        "question": 23,
+        "question": "What is the fundamental unit of data in Apache Spark?",
         "options": ["DataFrame", "RDD", "Dataset", "Table"],
         "answer": 1
     },
     {
-        "question": 24,
+        "question": "Given the below inverted index, which documents would be retrieved for the query?",
         "options": [
             "d1, d2, d3, d4, d6, d7, d9",
             "d2, d3, d5, d8",
@@ -210,7 +210,7 @@
         "answer": 0
     },
     {
-        "question": 25,
+        "question": "What does the term NoSQL represent?",
         "options": [
             "Not Structured Query Language",
             "Not Only SQL",
@@ -220,7 +220,7 @@
         "answer": 1
     },
     {
-        "question": 26,
+        "question": "Given a collection called myModules, what would be the MongoDB command to list all the data in this collection?",
         "options": [
             "db.myModules.show()",
             "db.myModules.find()",
@@ -230,7 +230,7 @@
         "answer": 1
     },
     {
-        "question": 27,
+        "question": "What is the purpose of lemmatization in NLP?",
         "options": [
             "Convert text into numerical format",
             "Reduce words to their root form",
@@ -240,17 +240,17 @@
         "answer": 1
     },
     {
-        "question": 28,
+        "question": "Which Python library is commonly used for EDA?",
         "options": ["Scikit-learn", "TensorFlow", "Matplotlib", "PyTorch"],
         "answer": 2
     },
     {
-        "question": 29,
+        "question": "What type of graph is this an example of?",
         "options": ["Bar chart", "Histogram", "Pie chart", "Line graph"],
         "answer": 1
     },
     {
-        "question": 30,
+        "question": "How does the HITS algorithm compute?",
         "options": [
             "Hub and authority values for web pages",
             "Only the number of incoming links",
@@ -260,7 +260,7 @@
         "answer": 0
     },
     {
-        "question": 31,
+        "question": "Which of the following best explains the function of a Secondary NameNode in traditional HDFS architecture?",
         "options": [
             "It stores all replicated blocks when DataNodes fail",
             "It acts as a live standby NameNode automatically",
@@ -270,7 +270,7 @@
         "answer": 2
     },
     {
-        "question": 32,
+        "question": "Sqoop is used for:",
         "options": [
             "Querying logs",
             "Data transfer between RDBMS and Hadoop",
@@ -280,7 +280,7 @@
         "answer": 1
     },
     {
-        "question": 33,
+        "question": "YARN stands for:",
         "options": [
             "Yet Another Resource Negotiator",
             "Your Application Resource Node",
@@ -290,7 +290,7 @@
         "answer": 0
     },
     {
-        "question": 34,
+        "question": "In the command reduceByKey(lambda x, y: x + y), what operation is actually being performed?",
         "options": [
             "Words are removed if repeated",
             "Counts belonging to the same word are added together",
@@ -300,7 +300,7 @@
         "answer": 1
     },
     {
-        "question": 35,
+        "question": "A correlation coefficient value of 0 generally suggests that:",
         "options": [
             "There is no linear relationship between the variables",
             "Variables are perfectly positively related",
@@ -310,7 +310,7 @@
         "answer": 0
     },
     {
-        "question": 36,
+        "question": "In the following aggregation snippet, what is the correct interpretation of $$employee.sal?",
         "options": [
             "It refers to a global variable named employee",
             "It refers to a field inside the current document being processed in the array",
@@ -320,7 +320,7 @@
         "answer": 1
     },
     {
-        "question": 37,
+        "question": "What is the main purpose of an inverted index in search engines?",
         "options": [
             "To store images and videos efficiently",
             "To map documents to words they contain",
@@ -330,7 +330,7 @@
         "answer": 1
     },
     {
-        "question": 38,
+        "question": "In MongoDB, which statement best describes the nature of documents and ObjectIds?",
         "options": [
             "MongoDB requires a fixed schema",
             "MongoDB is schema-less and auto-generates ObjectId",
@@ -340,7 +340,7 @@
         "answer": 1
     },
     {
-        "question": 39,
+        "question": "In MongoDB's aggregation framework, what is the correct purpose of using an aggregation pipeline such as $project, $filter, and $size together?",
         "options": [
             "It permanently modifies original documents",
             "It is used only to sort documents",
@@ -350,7 +350,7 @@
         "answer": 2
     },
     {
-        "question": 40,
+        "question": "Which of the following statements best describes the role of components in the Hadoop ecosystem?",
         "options": [
             "HDFS is used for data processing",
             "HDFS stores datasets, MapReduce processes data, Hive provides SQL-like querying",
@@ -360,7 +360,7 @@
         "answer": 1
     },
     {
-        "question": 41,
+        "question": "In MongoDB, which of the following is the correct way to store a date value in a document so that it is treated as a proper Date data type rather than a string?",
         "options": [
             "\"hiredate\": \"1989-06-09\"",
             "\"hiredate\": Date(\"1989-06-09\")",
@@ -370,7 +370,7 @@
         "answer": 2
     },
     {
-        "question": 42,
+        "question": "Which of the following correctly describes the basic working flow of a web search engine?",
         "options": [
             "Query is directly matched with databases",
             "Web crawler collects pages → indexer organizes content → query processor retrieves ranked results",
@@ -380,7 +380,7 @@
         "answer": 1
     },
     {
-        "question": 43,
+        "question": "In the MapReduce programming model, what is the primary function of the Mapper phase?",
         "options": [
             "It merges all results into final output",
             "It stores data permanently in HDFS",
@@ -390,7 +390,7 @@
         "answer": 2
     },
     {
-        "question": 44,
+        "question": "MongoDB stores data internally in which format?",
         "options": [
             "XML documents stored in tables",
             "BSON documents inside collections",
@@ -400,7 +400,7 @@
         "answer": 1
     },
     {
-        "question": 45,
+        "question": "HBase performs best under which condition?",
         "options": [
             "When used on a single machine",
             "When running on less than 3 DataNodes",
@@ -410,7 +410,7 @@
         "answer": 2
     },
     {
-        "question": 46,
+        "question": "Elasticsearch is built on which core concept for organizing and searching data?",
         "options": [
             "Relational tables and SQL joins",
             "Indexes containing documents for fast search retrieval",
@@ -420,7 +420,7 @@
         "answer": 1
     },
     {
-        "question": 47,
+        "question": "What is the main responsibility of the ApplicationMaster in YARN?",
         "options": [
             "Store HDFS data blocks permanently",
             "Manage cluster-wide resource allocation",
@@ -430,7 +430,7 @@
         "answer": 2
     },
     {
-        "question": 48,
+        "question": "What is the primary purpose of Hadoop in big data systems?",
         "options": [
             "To design user interfaces for web applications",
             "To store and process large datasets in a distributed environment",
@@ -440,7 +440,7 @@
         "answer": 1
     },
     {
-        "question": 49,
+        "question": "According to Eric Schmidt in 2010, how much data is generated every two days?",
         "options": [
             "500 Terabyte (TB)",
             "5 Exabyte (EB)",
@@ -450,10 +450,10 @@
         "answer": 1
     },
     {
-        "question": 50,
+        "question": "Which of the following types of applications are most suitable for a Big Data system?",
         "options": [
             "Personal note-taking app",
-            "Massive Grid Computer System such as CERN’s Large Hadron Collider Computing Grid",
+            "Massive Grid Computer System such as CERN's Large Hadron Collider Computing Grid",
             "Basic calculator software",
             "Offline text editor"
         ],
