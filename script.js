@@ -1,6 +1,6 @@
 /**
  * ═══════════════════════════════════════════════════════════
- * QUIZOS — script.js
+ * QUIZNOW — script.js
  * Full-featured MCQ quiz engine (vanilla JS, no dependencies)
  * ═══════════════════════════════════════════════════════════
  *
@@ -47,7 +47,7 @@ const state = {
     reviewOpen: false,
 };
 
-const STORAGE_KEY = "quizos_session";
+const STORAGE_KEY = "quiznow_session";
 const IMAGES_PATH = "images/";
 
 /* ═══════════════════════════════════════════════════════════
@@ -245,7 +245,7 @@ function saveProgress() {
     try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(snapshot));
     } catch (e) {
-        console.warn("QuizOS: localStorage save failed", e);
+        console.warn("Quiznow: localStorage save failed", e);
     }
 }
 
@@ -804,7 +804,7 @@ async function init() {
     } catch (e) {
         $("boot-q-count").textContent = "[ERROR: data.json not found]";
         $("boot-q-count").style.color = "var(--red)";
-        console.error("QuizOS: Failed to load res/data.json", e);
+        console.error("Quiznow: Failed to load res/data.json", e);
         return;
     }
 

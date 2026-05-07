@@ -1,4 +1,4 @@
-# Exam Prep (QUIZOS)
+# Exam Prep (QUIZNOW)
 
 A modern, interactive web-based MCQ quiz engine for exam preparation. Built with vanilla JavaScript, HTML, and CSS—no dependencies required.
 
