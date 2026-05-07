@@ -1,0 +1,462 @@
+[
+    {
+        "question": 1,
+        "options": [
+            "Student Information System such as eVision",
+            "Data warehouse",
+            "AI model training",
+            "Image processing"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 2,
+        "options": [
+            "db.weather.find({text:{$all:[\"sun\",\"rain\",\"icy\"]}})",
+            "db.weather.find({text:{$in:[/sun/,/rain/,/icy/]}})",
+            "db.weather.find({text:\"sun rain icy\"})",
+            "db.weather.find({$or:[\"sun\",\"rain\",\"icy\"]})"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 3,
+        "options": ["1000³", "1000⁴", "1000⁵", "1000⁶"],
+        "answer": 3
+    },
+    {
+        "question": 4,
+        "options": [
+            "The authority of a web page",
+            "The speed at which a web page loads in a browser",
+            "The number of images and multimedia files present on a web page",
+            "The total amount of text content available on a web page"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 5,
+        "options": [
+            "High-cardinality data",
+            "Low-cardinality data (gender, yes/no)",
+            "Text data",
+            "Video data"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 6,
+        "options": [
+            "d2 with score 2, d1 with score 1",
+            "d1 with score 2, d2 with score 1",
+            "d1 with score 1, d2 with score 1",
+            "d2 with score 3, d1 with score 2"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 7,
+        "options": [
+            "Delete dataset",
+            "Replace incorrect values with correct values",
+            "Ignore errors",
+            "Duplicate data"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 8,
+        "options": [
+            "df.select('user.screen_name','user.name').show(40)",
+            "df.filter(df['user.lang'] == \"de\").select('user.screen_name','user.name').show(40)",
+            "df.filter(df['user.name'] == \"de\").show(40)",
+            "df.groupBy('user.lang').count().show(40)"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 9,
+        "options": [
+            "Frequent terms like “and”, “or”, don’t bear any meaning for search and retrieval",
+            "Increase textual data with commonly used words",
+            "Translate all words into multiple languages",
+            "Convert raw text into image-based representations"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 10,
+        "options": [
+            "hdfs dfs -put file.txt /user/data/",
+            "hdfs dfs -ls /user/data/",
+            "hdfs dfs -rm /user/data/file.txt",
+            "cp -r /user/data /user/test/"
+        ],
+        "answer": 3
+    },
+    {
+        "question": 11,
+        "options": [
+            "Text file",
+            "Spreadsheet",
+            "Digital image",
+            "Database table"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 12,
+        "options": [
+            "Regression Model",
+            "Classification Model",
+            "Clustering Model",
+            "Reinforcement Model"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 13,
+        "options": ["Pig Script", "Pig Latin", "Pig SQL", "Pig Query"],
+        "answer": 1
+    },
+    {
+        "question": 14,
+        "options": ["Nominal", "Ordinal", "Interval", "Ratio"],
+        "answer": 2
+    },
+    {
+        "question": 15,
+        "options": [
+            "Key-value database",
+            "Document database",
+            "Column-family database",
+            "Graph database"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 16,
+        "options": [
+            "Handle fault tolerance",
+            "Access data fast",
+            "Distribution computations to nodes",
+            "All of the answers"
+        ],
+        "answer": 3
+    },
+    {
+        "question": 17,
+        "options": ["d1", "d2", "d3", "d4"],
+        "answer": 0
+    },
+    {
+        "question": 18,
+        "options": [
+            "Speed of data generation",
+            "Trustworthiness of data",
+            "Size of data",
+            "Storage format"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 19,
+        "options": [
+            "db.myTweets.find()",
+            "db.myTweets.findOne()",
+            "db.myTweets.schema()",
+            "db.myTweets.show()"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 20,
+        "options": [
+            "Map → Reduce → Shuffle",
+            "Reduce → Map → Sort",
+            "Map → Shuffle and Sort → Reduce",
+            "Sort → Map → Reduce"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 21,
+        "options": ["FileOutputFormat.setOutputPath(job, new Path(args[1]));"],
+        "answer": 0
+    },
+    {
+        "question": 22,
+        "options": [
+            "db.weather.find({text:\"icy\"})",
+            "db.weather.find({text:/icy/i})",
+            "db.weather.search(\"icy\")",
+            "db.weather.findCase(\"icy\")"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 23,
+        "options": ["DataFrame", "RDD", "Dataset", "Table"],
+        "answer": 1
+    },
+    {
+        "question": 24,
+        "options": [
+            "d1, d2, d3, d4, d6, d7, d9",
+            "d2, d3, d5, d8",
+            "d1, d5, d6, d8, d10",
+            "d3, d4, d5, d7, d9"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 25,
+        "options": [
+            "Not Structured Query Language",
+            "Not Only SQL",
+            "New Object SQL",
+            "None of the above"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 26,
+        "options": [
+            "db.myModules.show()",
+            "db.myModules.find()",
+            "db.find(myModules)",
+            "db.myModules.list()"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 27,
+        "options": [
+            "Convert text into numerical format",
+            "Reduce words to their root form",
+            "Remove punctuation marks",
+            "Identify part of speech tags"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 28,
+        "options": ["Scikit-learn", "TensorFlow", "Matplotlib", "PyTorch"],
+        "answer": 2
+    },
+    {
+        "question": 29,
+        "options": ["Bar chart", "Histogram", "Pie chart", "Line graph"],
+        "answer": 1
+    },
+    {
+        "question": 30,
+        "options": [
+            "Hub and authority values for web pages",
+            "Only the number of incoming links",
+            "The loading speed of web pages",
+            "The total word count of a webpage"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 31,
+        "options": [
+            "It stores all replicated blocks when DataNodes fail",
+            "It acts as a live standby NameNode automatically",
+            "It assists by merging fsimage and edit logs periodically",
+            "It replaces clients during read operations"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 32,
+        "options": [
+            "Querying logs",
+            "Data transfer between RDBMS and Hadoop",
+            "Monitoring cluster",
+            "Security scanning"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 33,
+        "options": [
+            "Yet Another Resource Negotiator",
+            "Your Application Resource Node",
+            "Yellow Area Resource Network",
+            "None"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 34,
+        "options": [
+            "Words are removed if repeated",
+            "Counts belonging to the same word are added together",
+            "Keys are converted into values",
+            "Words are split into characters"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 35,
+        "options": [
+            "There is no linear relationship between the variables",
+            "Variables are perfectly positively related",
+            "Variables are perfectly negatively related",
+            "One variable causes the other"
+        ],
+        "answer": 0
+    },
+    {
+        "question": 36,
+        "options": [
+            "It refers to a global variable named employee",
+            "It refers to a field inside the current document being processed in the array",
+            "It refers to the collection name employees",
+            "It refers to the output of $project stage"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 37,
+        "options": [
+            "To store images and videos efficiently",
+            "To map documents to words they contain",
+            "To compress web pages for faster loading",
+            "To encrypt search engine queries"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 38,
+        "options": [
+            "MongoDB requires a fixed schema",
+            "MongoDB is schema-less and auto-generates ObjectId",
+            "MongoDB enforces a strict schema",
+            "MongoDB stores data only in relational format"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 39,
+        "options": [
+            "It permanently modifies original documents",
+            "It is used only to sort documents",
+            "It processes data in multiple stages to transform and compute results",
+            "It replaces the need for all queries"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 40,
+        "options": [
+            "HDFS is used for data processing",
+            "HDFS stores datasets, MapReduce processes data, Hive provides SQL-like querying",
+            "YARN stores data blocks",
+            "Pig is used for cluster management"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 41,
+        "options": [
+            "\"hiredate\": \"1989-06-09\"",
+            "\"hiredate\": Date(\"1989-06-09\")",
+            "\"hiredate\": new Date(\"1989-06-09\")",
+            "\"hiredate\": (1989,06,09)"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 42,
+        "options": [
+            "Query is directly matched with databases",
+            "Web crawler collects pages → indexer organizes content → query processor retrieves ranked results",
+            "Users send queries → servers generate websites",
+            "Index is created first → then web pages are manually written"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 43,
+        "options": [
+            "It merges all results into final output",
+            "It stores data permanently in HDFS",
+            "It processes input data and generates intermediate key–value pairs",
+            "It schedules jobs across the Hadoop cluster"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 44,
+        "options": [
+            "XML documents stored in tables",
+            "BSON documents inside collections",
+            "CSV files inside databases",
+            "Plain JSON files without modification"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 45,
+        "options": [
+            "When used on a single machine",
+            "When running on less than 3 DataNodes",
+            "When deployed on at least 6–10 nodes",
+            "When used only for datasets under 1 GB"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 46,
+        "options": [
+            "Relational tables and SQL joins",
+            "Indexes containing documents for fast search retrieval",
+            "File blocks stored in HDFS",
+            "Key-value pairs stored only in memory"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 47,
+        "options": [
+            "Store HDFS data blocks permanently",
+            "Manage cluster-wide resource allocation",
+            "Coordinate execution of a specific application",
+            "Replace the ResourceManager in case of failure"
+        ],
+        "answer": 2
+    },
+    {
+        "question": 48,
+        "options": [
+            "To design user interfaces for web applications",
+            "To store and process large datasets in a distributed environment",
+            "To replace all relational databases",
+            "To execute only real-time transactions"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 49,
+        "options": [
+            "500 Terabyte (TB)",
+            "5 Exabyte (EB)",
+            "50 Petabyte (PB)",
+            "1 Zettabyte (ZB)"
+        ],
+        "answer": 1
+    },
+    {
+        "question": 50,
+        "options": [
+            "Personal note-taking app",
+            "Massive Grid Computer System such as CERN’s Large Hadron Collider Computing Grid",
+            "Basic calculator software",
+            "Offline text editor"
+        ],
+        "answer": 1
+    }
+]
