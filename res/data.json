@@ -181,7 +181,12 @@
     },
     {
         "question": "Which line of code tells Hadoop what output directory to create?",
-        "options": ["FileOutputFormat.setOutputPath(job, new Path(args[1]));"],
+        "options": [
+            "FileInputFormat.setOutputPath(job, new Path(args[0]));",
+            "FileInputFormat.setOutputPath(job, new Path(args[1]));",
+            "FileOutputFormat.setOutputPath(job, new Path(args[0]));",
+            "FileOutputFormat.setOutputPath(job, new Path(args[1]));"
+        ],
         "answer": 0
     },
     {
